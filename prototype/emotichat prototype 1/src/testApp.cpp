@@ -39,7 +39,7 @@ void testApp::setup() {
     }
     
     bSnapshot = false;
-    
+    pSensor.setup();
     
 }
 
@@ -50,9 +50,13 @@ void testApp::update() {
 			classifier.classify(tracker);
 		}
 	}
+    pSensor.update();
 }
 
 void testApp::draw() {
+    
+    
+    pSensor.draw();
 	ofSetColor(255);
     ofPushMatrix();
     ofTranslate(10, 10);
@@ -72,7 +76,7 @@ void testApp::draw() {
         ofSetColor(i == primary ? ofColor::teal: ofColor::teal);
 		ofRect(0, 0, w * classifier.getProbability(i) + .5, h);
         
-        cout<< classifier.getProbability(i) << " " << i << endl;
+//        cout<< classifier.getProbability(i) << " " << i << endl;
         
         angryValue = classifier.getProbability(0);
         happyValue = classifier.getProbability(1);
@@ -116,6 +120,7 @@ void testApp::draw() {
     	}
     
     ofPopMatrix();
+    cout << "pulse rate: " << pSensor.BPM << endl;
 }
 
 
@@ -164,6 +169,7 @@ void testApp::keyReleased(int key){
     
     if(key==' ')
     {
+        input.shake = ofMap(pSensor.BPM, 60, 130, 0.0, 3.0, true);
         words.push_back(input);
         
         // Reset the user input word

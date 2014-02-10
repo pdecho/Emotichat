@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxFaceTracker.h"
 #include "Word.h"
+#include "ofxPulseSensor.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -44,5 +45,8 @@ public:
     bool 				bSnapshot;
     ofImage             img;
     char 				snapString[255];
+    
+    ofxPulseSensor  pSensor;
+    
 
 };
