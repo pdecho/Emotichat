@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4791C55018A8929E00CDF0EF /* AnalogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4791C53B18A8929E00CDF0EF /* AnalogIn.cpp */; };
 		4791C55118A8929E00CDF0EF /* ofxPulseSensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4791C53D18A8929E00CDF0EF /* ofxPulseSensor.cpp */; };
-		4791C55218A8929E00CDF0EF /* libwiringPi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4791C54F18A8929E00CDF0EF /* libwiringPi.a */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -90,18 +89,6 @@
 		4791C53C18A8929E00CDF0EF /* AnalogIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalogIn.h; sourceTree = "<group>"; };
 		4791C53D18A8929E00CDF0EF /* ofxPulseSensor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPulseSensor.cpp; sourceTree = "<group>"; };
 		4791C53E18A8929E00CDF0EF /* ofxPulseSensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxPulseSensor.h; sourceTree = "<group>"; };
-		4791C54218A8929E00CDF0EF /* gertboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gertboard.h; sourceTree = "<group>"; };
-		4791C54318A8929E00CDF0EF /* lcd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcd.h; sourceTree = "<group>"; };
-		4791C54418A8929E00CDF0EF /* piNes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = piNes.h; sourceTree = "<group>"; };
-		4791C54518A8929E00CDF0EF /* softPwm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softPwm.h; sourceTree = "<group>"; };
-		4791C54618A8929E00CDF0EF /* softServo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softServo.h; sourceTree = "<group>"; };
-		4791C54718A8929E00CDF0EF /* softTone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = softTone.h; sourceTree = "<group>"; };
-		4791C54818A8929E00CDF0EF /* wiringPi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPi.h; sourceTree = "<group>"; };
-		4791C54918A8929E00CDF0EF /* wiringPiI2C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPiI2C.h; sourceTree = "<group>"; };
-		4791C54A18A8929E00CDF0EF /* wiringPiSPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringPiSPI.h; sourceTree = "<group>"; };
-		4791C54B18A8929E00CDF0EF /* wiringSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringSerial.h; sourceTree = "<group>"; };
-		4791C54C18A8929E00CDF0EF /* wiringShift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wiringShift.h; sourceTree = "<group>"; };
-		4791C54F18A8929E00CDF0EF /* libwiringPi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwiringPi.a; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -208,7 +195,6 @@
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
 				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
 				E45BE97E0E8CC7DD009D7055 /* Carbon.framework in Frameworks */,
-				4791C55218A8929E00CDF0EF /* libwiringPi.a in Frameworks */,
 				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
 				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
@@ -248,53 +234,9 @@
 		4791C53F18A8929E00CDF0EF /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				4791C54018A8929E00CDF0EF /* wiringPi */,
 			);
 			name = libs;
 			path = ../../../addons/ofxPulseSensor/libs;
-			sourceTree = "<group>";
-		};
-		4791C54018A8929E00CDF0EF /* wiringPi */ = {
-			isa = PBXGroup;
-			children = (
-				4791C54118A8929E00CDF0EF /* include */,
-				4791C54D18A8929E00CDF0EF /* lib */,
-			);
-			path = wiringPi;
-			sourceTree = "<group>";
-		};
-		4791C54118A8929E00CDF0EF /* include */ = {
-			isa = PBXGroup;
-			children = (
-				4791C54218A8929E00CDF0EF /* gertboard.h */,
-				4791C54318A8929E00CDF0EF /* lcd.h */,
-				4791C54418A8929E00CDF0EF /* piNes.h */,
-				4791C54518A8929E00CDF0EF /* softPwm.h */,
-				4791C54618A8929E00CDF0EF /* softServo.h */,
-				4791C54718A8929E00CDF0EF /* softTone.h */,
-				4791C54818A8929E00CDF0EF /* wiringPi.h */,
-				4791C54918A8929E00CDF0EF /* wiringPiI2C.h */,
-				4791C54A18A8929E00CDF0EF /* wiringPiSPI.h */,
-				4791C54B18A8929E00CDF0EF /* wiringSerial.h */,
-				4791C54C18A8929E00CDF0EF /* wiringShift.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		4791C54D18A8929E00CDF0EF /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				4791C54E18A8929E00CDF0EF /* linuxarmv6l */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		4791C54E18A8929E00CDF0EF /* linuxarmv6l */ = {
-			isa = PBXGroup;
-			children = (
-				4791C54F18A8929E00CDF0EF /* libwiringPi.a */,
-			);
-			path = linuxarmv6l;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {

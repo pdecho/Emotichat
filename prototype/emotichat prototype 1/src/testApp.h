@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxFaceTracker.h"
+#include "ofxFaceTrackerThreaded.h"
 #include "Word.h"
 #include "ofxPulseSensor.h"
 
@@ -20,7 +20,7 @@ public:
     string userInput;
 	
 	ofVideoGrabber cam;
-	ofxFaceTracker tracker;
+	ofxFaceTrackerThreaded tracker;
 	ExpressionClassifier classifier;
     
     ofTrueTypeFont normalFont;
