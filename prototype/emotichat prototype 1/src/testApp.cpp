@@ -57,7 +57,8 @@ void testApp::draw() {
     
     
     pSensor.draw();
-	ofSetColor(255);
+	
+    ofSetColor(255);
     ofPushMatrix();
     ofTranslate(10, 10);
     ofScale(0.5, 0.5);
@@ -81,8 +82,6 @@ void testApp::draw() {
         angryValue = classifier.getProbability(0);
         happyValue = classifier.getProbability(1);
         
-        
-        
 		ofSetColor(255);
 		ofDrawBitmapString(classifier.getDescription(i), 5, 9);
 		ofTranslate(0, h + 5);
@@ -95,6 +94,8 @@ void testApp::draw() {
     ofPushMatrix();
     ofTranslate(0, 230);
     ofPoint pos(10, LEADING);
+    
+    if (words.size()> 0) {
     for(int i=0; i<words.size(); i++)
     {
         if (pos.x+words[i].getWidth() > ofGetWidth()) {
@@ -104,8 +105,10 @@ void testApp::draw() {
         words[i].draw(pos);
         pos.x += words[i].getWidth();
     }
-    
+    }
     // Draw the word that the user is currently typing
+    
+    if (input.word.length() != 0)
     input.draw(pos);
     
         if (bSnapshot == true){
